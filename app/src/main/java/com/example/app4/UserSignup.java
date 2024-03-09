@@ -14,9 +14,12 @@ import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -49,7 +52,6 @@ import io.realm.mongodb.User;
 import io.realm.mongodb.mongo.MongoClient;
 import io.realm.mongodb.mongo.MongoCollection;
 import io.realm.mongodb.mongo.MongoDatabase;
-
 public class UserSignup extends AppCompatActivity {
 
 
@@ -76,6 +78,7 @@ public class UserSignup extends AppCompatActivity {
     MongoClient mongoClient, mongoClient1;
     App app;
 
+    Spinner spinner2;
     ImageButton showBtn, hideBtn;
 
 
@@ -108,11 +111,28 @@ public class UserSignup extends AppCompatActivity {
         edtEmail1 = findViewById(R.id.email);
         edtName1 = findViewById(R.id.reg_name);
         edtPass1 = findViewById(R.id.password);
+        spinner2 = findViewById(R.id.spinner2);
 
+
+
+        String[] user1 = {"USER", "ADMIN"};
     //MongoDB
 
 
+        ArrayAdapter ad;
+        ad = new ArrayAdapter(UserSignup.this, android.R.layout.simple_spinner_item, user1);
+        ad.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner2.setAdapter(ad);
+        spinner2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
+        });
 
     //...................................................................................
     //.............below line is for getting instance of our FirebaseAuth................

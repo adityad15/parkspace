@@ -20,7 +20,7 @@ public class SlotBooking extends AppCompatActivity implements AdapterView.OnItem
     ToggleButton toggleButton;
     LinearLayout linearLayout;
     TextView timeText, percentText, textQues, costPerkWh, estimatedCost;
-    String selectedText = null;
+    String selectedText = new String();
     Float kWh = 3.0f;
     Float battery = 30.0f;
     @Override
