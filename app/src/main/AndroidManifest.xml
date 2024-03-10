@@ -17,6 +17,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme1">
         <activity
+            android:name=".admin_files.HomePageAdmin"
+            android:exported="false" />
+        <activity
             android:name=".user_files.HistoryPage"
             android:exported="false" />
         <activity
