@@ -4,9 +4,7 @@ package com.example.app4;
 //................................Importing libraries................................
 //...................................................................................
 import android.annotation.SuppressLint;
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.text.method.HideReturnsTransformationMethod;
@@ -26,6 +24,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.app4.user_files.HomePage;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseException;
@@ -36,10 +35,10 @@ import com.google.firebase.auth.PhoneAuthOptions;
 import com.google.firebase.auth.PhoneAuthProvider;
 
 import org.bson.Document;
-import org.bson.types.ObjectId;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -83,6 +82,7 @@ public class UserSignup extends AppCompatActivity {
 
 
     Credentials credentials;
+    String user_admin = "";
 
 //...................................................................................
 //.............................FireBase Authentication...............................
@@ -115,7 +115,7 @@ public class UserSignup extends AppCompatActivity {
 
 
 
-        String[] user1 = {"USER", "ADMIN"};
+        String[] user1 = {"Select Your Use","Park my vehicle", "Make parking lot available"};
     //MongoDB
 
 
@@ -126,7 +126,7 @@ public class UserSignup extends AppCompatActivity {
         spinner2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-
+                user_admin = user1[position];
             }
 
             @Override
@@ -183,7 +183,7 @@ public class UserSignup extends AppCompatActivity {
                              else
                              {
                                  Log.v("User","Registration Failed");
-                                 Toast.makeText(UserSignup.this, "not Registered", Toast.LENGTH_SHORT).show();
+                                 Toast.makeText(UserSignup.this, "Failed to register.\n Please try again later!!!", Toast.LENGTH_SHORT).show();
                                  edtEmail1.getText().clear();
                                  edtName1.getText().clear();
                                  edtPhone1.getText().clear();
@@ -234,9 +234,18 @@ public class UserSignup extends AppCompatActivity {
                             if (result.isSuccess()) {
                                 Log.v("User", "Logged In Successfully");
 
-                                regMongo();
-                                startActivity(new Intent(UserSignup.this, HomePage.class));
-                            } else {
+                                if (Objects.equals(user_admin, "USER")) {
+                                    regMongo();
+                                    startActivity(new Intent(UserSignup.this, HomePage.class));
+                                }
+                                else if (Objects.equals(user_admin, "ADMIN")) {
+                                    startActivity(new Intent(UserSignup.this, HomePage.class));
+                                }
+                                else {
+                                    Toast.makeText(UserSignup.this, "Please select your type of user!!!", Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                            else {
                                 Log.v("User", "Failed to login");
                                 Toast.makeText(UserSignup.this, "Invalid login", Toast.LENGTH_SHORT).show();
                             }

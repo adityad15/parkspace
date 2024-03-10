@@ -4,7 +4,6 @@ package com.example.app4;
 //................................Importing libraries................................
 //...................................................................................
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -16,7 +15,6 @@ import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -25,13 +23,12 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.app4.user_files.HomePage;
+
 import io.realm.Realm;
 import io.realm.mongodb.App;
 import io.realm.mongodb.AppConfiguration;
 import io.realm.mongodb.Credentials;
-import io.realm.mongodb.User;
-import io.realm.mongodb.mongo.MongoClient;
-import io.realm.mongodb.mongo.MongoDatabase;
 
 public class UserLogin extends AppCompatActivity {
 

@@ -17,22 +17,22 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme1">
         <activity
-            android:name=".HistoryPage"
+            android:name=".user_files.HistoryPage"
             android:exported="false" />
         <activity
-            android:name=".SlotBooking"
+            android:name=".user_files.SlotBooking"
             android:exported="false" />
         <activity
-            android:name=".StationDetails"
+            android:name=".user_files.StationDetails"
             android:exported="false" />
         <activity
-            android:name=".UserSupportPage"
+            android:name=".user_files.UserSupportPage"
             android:exported="false" />
         <activity
-            android:name=".UserAccInfo"
+            android:name=".user_files.UserAccInfo"
             android:exported="false" />
         <activity
-            android:name=".UserProfile"
+            android:name=".user_files.UserProfile"
             android:exported="false" />
 
         <meta-data
@@ -40,7 +40,7 @@
             android:value="@string/map_key" />
 
         <activity
-            android:name=".HomePage"
+            android:name=".user_files.HomePage"
             android:exported="false" />
         <activity
             android:name=".UserSignup"

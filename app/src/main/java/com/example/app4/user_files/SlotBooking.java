@@ -1,4 +1,4 @@
-package com.example.app4;
+package com.example.app4.user_files;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,6 +12,8 @@ import android.widget.Toast;
 import android.widget.ToggleButton;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.app4.R;
 
 public class SlotBooking extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 

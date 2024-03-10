@@ -1,4 +1,4 @@
-package com.example.app4;
+package com.example.app4.user_files;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.app4.R;
 
 public class StationDetails extends AppCompatActivity {
 

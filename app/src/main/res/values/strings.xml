@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ev</string>
+    <string name="app_name">ParkSpace</string>
     <string name="sign_up">SIGN UP</string>
     <string name="register">LOGIN</string>
     <string name="verify">Verify</string>

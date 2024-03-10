@@ -1,8 +1,10 @@
-package com.example.app4;
+package com.example.app4.user_files;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.app4.R;
 
 public class UserSupportPage extends AppCompatActivity {
 
