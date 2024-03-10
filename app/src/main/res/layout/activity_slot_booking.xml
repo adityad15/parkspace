@@ -5,136 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".user_files.SlotBooking">
-    <LinearLayout
+
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+        android:gravity="center"
+        android:text="ParkSpace"
+        android:fontFamily="@font/rowdies_bold"
+        android:textSize="30dp" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="ParkSpace"
-                android:fontFamily="@font/rowdies_bold"
-                android:textSize="30dp" />
-
-            <ImageButton
-                android:id="@+id/navBack"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="5sp"
-                android:background="@drawable/btnbg2"
-                android:minWidth="48dp"
-                android:minHeight="48dp"
-                android:onClick="returnBack"
-                android:src="@drawable/ic_baseline_arrow_back_24"
-                tools:ignore="SpeakableTextPresentCheck" />
-        </RelativeLayout>
-
-
-
-        <LinearLayout
-            android:id="@+id/linearLayoutBook"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_marginTop="20dp"
-                android:id="@+id/textQues"
-                android:layout_width="match_parent"
-                android:textColor="@color/textColor"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/rowdies_bold"
-                android:gravity="center_horizontal"
-                android:textSize="25sp"
-                android:layout_marginStart="10sp"
-                android:layout_marginEnd="10sp"
-                android:text="How much time you want to charge your bike[in minutes]?"/>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:orientation="vertical"
-                android:background="@drawable/textview_border"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp">
-
-                <Spinner
-                    android:id="@+id/spinner"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:spinnerMode="dialog"
-                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
-            </LinearLayout>
-
-            <TableLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <TableRow>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Cost:"
-                        android:layout_marginTop="20dp"
-                        android:fontFamily="@font/rowdies_regular"
-                        android:textColor="@color/textColor"
-                        android:layout_marginStart="15sp"/>
-
-                    <TextView
-                        android:id="@+id/costperkWh"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
-                        android:textSize="15sp"
-                        android:textColor="@color/textColor"
-                        android:layout_marginStart="30sp"
-                        android:fontFamily="@font/rowdies_regular"
-                        android:text="cost"/>
-                </TableRow>
-                <TableRow>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
-                        android:textColor="@color/textColor"
-                        android:text="Estimated Cost:"
-                        android:layout_marginStart="15sp"
-                        android:fontFamily="@font/rowdies_regular"/>
-
-                    <TextView
-                        android:id="@+id/estimatecost"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
-                        android:textSize="15sp"
-                        android:textColor="@color/textColor"
-                        android:layout_marginStart="30sp"
-                        android:fontFamily="@font/rowdies_regular"
-                        android:text="cost"/>
-                </TableRow>
-            </TableLayout>
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:text="CONFIRM YOUR SLOT"
-                android:textColor="@color/mainBackground"
-                android:shadowDy="10"
-                android:shadowDx="10"
-                android:shadowRadius="2"
-                android:shadowColor="@color/mainBackground2"
-                android:fontFamily="@font/rowdies_bold"
-                android:textSize="20sp"
-                android:layout_marginTop="25dp"/>
-        </LinearLayout>
-
-
-    </LinearLayout>
 
 </ScrollView>
