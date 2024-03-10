@@ -52,7 +52,7 @@ public class HomePage extends FragmentActivity implements OnMapReadyCallback {
     ImageButton mapReturn, profile, history;
     LatLng latLng, latLng1, latLng2, latLng3, latLng4, latLng5;
     String locate;
-    StationDetails stationDetails;
+    ParkSpaceDetails stationDetails;
     MarkerOptions options1,options2,options3,options4,options5;
 
 
@@ -203,7 +203,7 @@ public class HomePage extends FragmentActivity implements OnMapReadyCallback {
                                 @Override
                                 public boolean onMarkerClick(@NonNull Marker marker) {
                                     String markerName = marker.getTitle();
-                                    Intent intent = new Intent(getApplicationContext(), StationDetails.class);
+                                    Intent intent = new Intent(getApplicationContext(), ParkSpaceDetails.class);
                                     intent.putExtra("message", markerName);
 
                                     switch (markerName) {
@@ -290,6 +290,7 @@ public class HomePage extends FragmentActivity implements OnMapReadyCallback {
 
     @Override
     public void onBackPressed() {
+        super.onBackPressed();
         AlertDialog.Builder builder = new AlertDialog.Builder(HomePage.this);
         builder.setMessage("Do you want to exit");
         builder.setTitle("Alert!");

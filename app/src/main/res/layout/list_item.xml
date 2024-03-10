@@ -14,7 +14,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/rowdies_bold"
-            android:text="@string/charging_station_name"
+            android:text="@string/park_space_name"
             android:textSize="15sp" />
         <TextView
             android:id="@+id/bookingDate"

@@ -127,7 +127,7 @@
     <string name="ev_charging_app">ParkSpace</string>
     <string name="todo">TODO</string>
     <string name="admin">[ADMIN]</string>
-    <string name="charging_station_name">Charging Station Name</string>
+    <string name="park_space_name">ParkSpace Name</string>
     <string name="open_close">open/close</string>
     <string name="status">Status:</string>
     <string name="status2">current_status</string>
@@ -135,11 +135,11 @@
     <string name="stationaddress">station_address</string>
     <string name="location">Location:</string>
     <string name="currentlocation">current_location</string>
-    <string name="chargingPorts">No. of Connectors:</string>
-    <string name="noOfPorts">no_of_connectors</string>
+    <string name="chargingPorts">No. of ParkSpaces:</string>
+    <string name="noOfPorts">no_of_parkspace</string>
     <string name="contactNumber">contact_number</string>
     <string name="contact">Contact:</string>
-    <string name="book_slot_now">BOOK SLOT NOW</string>
+    <string name="book_slot_now">NEXT</string>
     <string name="evigo"><a href="https://goo.gl/maps/stHPnnQ5bqUfdp7cA">evigo</a></string>
     <string name="ather"><a href="https://goo.gl/maps/XECDkBwY4sn5hicG9">ather</a></string>
     <string name="gest"><a href="https://goo.gl/maps/bR2YDyJsqxySccyL7">gest</a></string>

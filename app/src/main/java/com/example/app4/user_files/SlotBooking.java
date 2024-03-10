@@ -32,11 +32,8 @@ public class SlotBooking extends AppCompatActivity implements AdapterView.OnItem
 
         Intent intent5 = getIntent();
         String price = intent5.getStringExtra("price");
-        toggleButton = findViewById(R.id.timepercent);
         Spinner spinner = findViewById(R.id.spinner);
         linearLayout = findViewById(R.id.linearLayoutBook);
-        timeText = findViewById(R.id.timeTxt);
-        percentText = findViewById(R.id.percentTxt);
         textQues = findViewById(R.id.textQues);
         costPerkWh = findViewById(R.id.costperkWh);
         costPerkWh.setText(price + " Rs/Unit");
@@ -57,7 +54,7 @@ public class SlotBooking extends AppCompatActivity implements AdapterView.OnItem
                     percentText.setBackgroundColor(getResources().getColor(R.color.TRANSPERENT2));
                     timeText.setBackgroundColor(getResources().getColor(R.color.TRANSPERENT));
                     textQues.setText("How much percent you want to charge your bike?");
-                    ad = new ArrayAdapter(SlotBooking.this, android.R.layout.simple_spinner_item, station2);
+                    ad = new ArrayAdapter(SlotBooking.this, R.layout.spinner_text_item, station2);
                     ad.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                     spinner.setAdapter(ad);
 

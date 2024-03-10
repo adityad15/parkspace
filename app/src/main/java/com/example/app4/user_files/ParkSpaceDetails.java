@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 import com.example.app4.R;
 
-public class StationDetails extends AppCompatActivity {
+public class ParkSpaceDetails extends AppCompatActivity {
 
     TextView status, address, contact, price, ather,arjun,gest,synergy,evigo, ports, stationName;
     Button bookBtn;
@@ -22,7 +22,7 @@ public class StationDetails extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_station_details);
+        setContentView(R.layout.activity_park_space_details);
 
         status = findViewById(R.id.currentStatus);
         address = findViewById(R.id.stationAddress);

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.app4">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <!-- NETWORK PERMISSIONS -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- LOCATION PERMISSIONS -->
@@ -17,6 +16,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme1">
         <activity
+            android:name=".admin_files.AdminHomePage"
+            android:exported="false" />
+        <activity
+            android:name=".admin_files.AdminRegistration"
+            android:exported="false" />
+        <activity
             android:name=".admin_files.HomePageAdmin"
             android:exported="false" />
         <activity
@@ -26,7 +31,7 @@
             android:name=".user_files.SlotBooking"
             android:exported="false" />
         <activity
-            android:name=".user_files.StationDetails"
+            android:name=".user_files.ParkSpaceDetails"
             android:exported="false" />
         <activity
             android:name=".user_files.UserSupportPage"

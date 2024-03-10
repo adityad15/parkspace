@@ -25,6 +25,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.app4.user_files.HomePage;
+import com.example.app4.admin_files.AdminRegistration;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseException;
@@ -120,7 +121,7 @@ public class UserSignup extends AppCompatActivity {
 
 
         ArrayAdapter ad;
-        ad = new ArrayAdapter(UserSignup.this, android.R.layout.simple_spinner_item, user1);
+        ad = new ArrayAdapter(UserSignup.this, R.layout.spinner_text_item, user1);
         ad.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner2.setAdapter(ad);
         spinner2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -232,14 +233,17 @@ public class UserSignup extends AppCompatActivity {
                         @Override
                         public void onResult(App.Result<User> result) {
                             if (result.isSuccess()) {
-                                Log.v("User", "Logged In Successfully");
-
-                                if (Objects.equals(user_admin, "USER")) {
+//...................................................................................
+//...................................Spinner code....................................
+//...................................................................................
+                                if (Objects.equals(user_admin, "Park my vehicle")) {
                                     regMongo();
                                     startActivity(new Intent(UserSignup.this, HomePage.class));
+                                    Log.v("User", "Logged In Successfully");
                                 }
-                                else if (Objects.equals(user_admin, "ADMIN")) {
-                                    startActivity(new Intent(UserSignup.this, HomePage.class));
+                                else if (Objects.equals(user_admin, "Make parking lot available")) {
+                                    startActivity(new Intent(UserSignup.this, AdminRegistration.class));
+                                    Log.v("User", "Logged In Successfully");
                                 }
                                 else {
                                     Toast.makeText(UserSignup.this, "Please select your type of user!!!", Toast.LENGTH_SHORT).show();
@@ -270,7 +274,7 @@ public class UserSignup extends AppCompatActivity {
 
             }
         });
-    }
+}
 
     private void regMongo() {
         User user = app.currentUser();
