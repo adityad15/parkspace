@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="40dp"
+    tools:context=".admin_files.AdminRegistration">
+
+    <EditText
+        android:id="@+id/adminName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:editable="false"
+        android:hint="Full Name"
+        android:fontFamily="@font/rowdies_regular"
+        android:paddingStart="10dp"
+        android:textColor="@color/textColor"
+        android:background="@color/tintTransperent"/>
+
+    <EditText
+        android:id="@+id/adminEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:editable="false"
+        android:hint="Email"
+        android:fontFamily="@font/rowdies_regular"
+        android:paddingStart="10dp"
+        android:textColor="@color/textColor"
+        android:background="@color/tintTransperent"/>
+
+    <EditText
+        android:id="@+id/adminPhine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:editable="false"
+        android:hint="Phn No."
+        android:fontFamily="@font/rowdies_regular"
+        android:paddingStart="10dp"
+        android:textColor="@color/textColor"
+        android:background="@color/tintTransperent"/>
+
+    <EditText
+        android:id="@+id/gstNo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:hint="GSTIN"
+        android:fontFamily="@font/rowdies_regular"
+        android:paddingStart="10dp"
+        android:textColor="@color/textColor"/>
+
+    <EditText
+        android:id="@+id/adminAddr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:hint="Address"
+        android:fontFamily="@font/rowdies_regular"
+        android:paddingStart="10dp"
+        android:textColor="@color/textColor"/>
+
+    <Button
+        android:id="@+id/submitBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SUBMIT"
+        android:textColor="@color/textColor3"/>
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>
