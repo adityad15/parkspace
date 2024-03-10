@@ -40,6 +40,10 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 public class HomePage extends FragmentActivity implements OnMapReadyCallback {
 
 //...................................................................................
@@ -50,7 +54,7 @@ public class HomePage extends FragmentActivity implements OnMapReadyCallback {
     SupportMapFragment mapFragment;
     FloatingActionButton zoomIn, zoomOut, recenter1;
     ImageButton mapReturn, profile, history;
-    LatLng latLng, latLng1, latLng2, latLng3, latLng4, latLng5;
+    LatLng latLng, latLng1, latLng2, latLng3, latLng4, latLng5, lats;
     String locate;
     ParkSpaceDetails stationDetails;
     MarkerOptions options1,options2,options3,options4,options5;
@@ -178,26 +182,27 @@ public class HomePage extends FragmentActivity implements OnMapReadyCallback {
 
                             //set marker
                             MarkerOptions options = new MarkerOptions().position(latLng).title("Current Location")
-                                    .icon(BitmapFromVector(getApplicationContext(), R.drawable.location1));
+                                    .icon(BitmapFromVector(getApplicationContext(), R.drawable.lambo1));
                             map = googleMap;
                             map.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 14), 2000, null);
                             googleMap.addMarker(options);
                             map.getUiSettings().setRotateGesturesEnabled(false);
 
-                            options1 = new MarkerOptions().position(latLng1).title("Ather Grid Charging Station").icon(BitmapFromVector(getApplicationContext(), R.drawable.station));
-                            googleMap.addMarker(options1);
+                            HashMap<Double,Double> markers = new HashMap<>();
+                            markers.put(latLng1.latitude,latLng1.longitude);
+                            markers.put(latLng2.latitude,latLng2.longitude);
+                            markers.put(latLng3.latitude,latLng3.longitude);
+                            markers.put(latLng4.latitude,latLng4.longitude);
+                            markers.put(latLng5.latitude,latLng5.longitude);
 
-                            options2 = new MarkerOptions().position(latLng2).title("Arjun Engineering Services").icon(BitmapFromVector(getApplicationContext(), R.drawable.station));
-                            googleMap.addMarker(options2);
+                            for(Map.Entry m : markers.entrySet()){
+                                System.out.println(m.getKey()+" "+m.getValue());
+                                lats = new LatLng((Double) m.getKey(), (Double) m.getValue());
+                                options1  = new MarkerOptions().position(lats).icon(BitmapFromVector(getApplicationContext(), R.drawable.park));
+                                googleMap.addMarker(options1);
+                            }
 
-                            options3 = new MarkerOptions().position(latLng3).title("Go Easy Smart Technology Pvt Ltd").icon(BitmapFromVector(getApplicationContext(), R.drawable.station));
-                            googleMap.addMarker(options3);
-
-                            options4 = new MarkerOptions().position(latLng4).title("Synergy Solutions AC Charging Station").icon(BitmapFromVector(getApplicationContext(), R.drawable.station));
-                            googleMap.addMarker(options4);
-
-                            options5 = new MarkerOptions().position(latLng5).title("Evigo Charge Charging Station").icon(BitmapFromVector(getApplicationContext(), R.drawable.station));
-                            googleMap.addMarker(options5);
+//
 
                             googleMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
                                 @Override
