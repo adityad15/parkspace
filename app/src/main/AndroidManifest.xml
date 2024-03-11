@@ -22,9 +22,6 @@
             android:name=".admin_files.AdminRegistration"
             android:exported="false" />
         <activity
-            android:name=".admin_files.HomePageAdmin"
-            android:exported="false" />
-        <activity
             android:name=".user_files.HistoryPage"
             android:exported="false" />
         <activity

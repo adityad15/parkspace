@@ -25,9 +25,11 @@ public class AdminRegistration extends AppCompatActivity {
     private TextView textView;
     private Button button;
 
+    double lat, longi;
+
     @SuppressLint("MissingInflatedId")
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_admin_registration);
@@ -50,8 +52,8 @@ public class AdminRegistration extends AppCompatActivity {
                 try {
                     addressList = geocoder.getFromLocationName(editText.getText().toString(), 1);
                     if (addressList != null){
-                        double lat = addressList.get(0).getLatitude();
-                        double longi = addressList.get(0).getLongitude();
+                        lat = addressList.get(0).getLatitude();
+                         longi = addressList.get(0).getLongitude();
                         textView.setText("lat: "+lat+"long: "+longi);
                     }
 
