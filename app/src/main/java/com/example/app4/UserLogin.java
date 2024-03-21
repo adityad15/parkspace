@@ -112,8 +112,8 @@ public class UserLogin extends AppCompatActivity {
 
 
     public void hidePassword(View view) {
-        showBtn = findViewById(R.id.showPass);
-        hideBtn = findViewById(R.id.hidePass);
+//        showBtn = findViewById(R.id.showPass);
+//        hideBtn = findViewById(R.id.hidePass);
 
         if (pass2.getTransformationMethod()==PasswordTransformationMethod.getInstance()){
             pass2.setTransformationMethod(HideReturnsTransformationMethod.getInstance());

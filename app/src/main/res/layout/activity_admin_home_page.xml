@@ -19,7 +19,7 @@
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="12dp">
+        android:padding="20dp">
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -33,10 +33,159 @@
 
             <TextView android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginStart="15dp"
                 android:fontFamily="@font/rowdies_regular"
                 android:textSize="15dp"
-                android:text="Full Name"/>
+                android:text="Name of owner"/>
 
         </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/rowdies_regular"
+                android:textSize="15dp"
+                android:text="Company Name:"/>
+
+            <TextView android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/rowdies_regular"
+                android:textSize="15dp"
+                android:text="Name of the company"/>
+
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/rowdies_regular"
+                android:textSize="15dp"
+                android:text="Contact No.:"/>
+
+            <TextView android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/rowdies_regular"
+                android:textSize="15dp"
+                android:text="Number"/>
+
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/rowdies_regular"
+                android:textSize="15dp"
+                android:text="Email:"/>
+
+            <TextView android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/rowdies_regular"
+                android:textSize="15dp"
+                android:text="email"/>
+
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/rowdies_regular"
+                android:textSize="15dp"
+                android:text="City:"/>
+
+            <TextView android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/rowdies_regular"
+                android:textSize="15dp"
+                android:text="City"/>
+
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/rowdies_regular"
+                android:textSize="15dp"
+                android:text="State:"/>
+
+            <TextView android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/rowdies_regular"
+                android:textSize="15dp"
+                android:text="State"/>
+
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/rowdies_regular"
+                android:textSize="15dp"
+                android:text="Address:"/>
+
+            <TextView android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/rowdies_regular"
+                android:textSize="15dp"
+                android:text="address"/>
+
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/rowdies_regular"
+                android:textSize="15dp"
+                android:text="Used ParkSpaces:"/>
+
+            <TextView android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/rowdies_regular"
+                android:textSize="15dp"
+                android:text="no of slots"/>
+
+        </TableRow>
+
     </TableLayout>
 </LinearLayout>

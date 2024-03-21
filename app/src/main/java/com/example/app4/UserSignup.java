@@ -161,7 +161,7 @@ public class UserSignup extends AppCompatActivity {
                         // displaying a toast message.
                             Toast.makeText(UserSignup.this, "Please enter a valid phone number.", Toast.LENGTH_SHORT).show();
                         } else {
-                             app.getEmailPassword().registerUserAsync(edtPhone1.getText().toString(),edtPass1.getText().toString(), (App.Result<Void> it) ->{
+                             app.getEmailPassword().registerUserAsync(edtPhone1.getText().toString(), edtPass1.getText().toString(), (App.Result<Void> it) ->{
                              if(it.isSuccess())
                              {
                                  Log.v("User","Registered with email successfully");
@@ -215,6 +215,7 @@ public class UserSignup extends AppCompatActivity {
             public void onClick(View v) {
                 // validating if the OTP text field is empty or not.
                 if (TextUtils.isEmpty(edtOTP1.getText().toString())) {
+                    startActivity(new Intent(UserSignup.this, AdminRegistration.class));
 
                 // if the OTP text field is empty display
                 // a message to user to enter OTP
@@ -432,8 +433,8 @@ public class UserSignup extends AppCompatActivity {
     }
 
     public void hidePassword(View view) {
-        showBtn = findViewById(R.id.showPass);
-        hideBtn = findViewById(R.id.hidePass);
+//        showBtn = findViewById(R.id.showPass);
+//        hideBtn = findViewById(R.id.hidePass);
 
         if (edtPass1.getTransformationMethod()== PasswordTransformationMethod.getInstance()){
 //            pass2.setTransformationMethod(PasswordTransformationMethod.getInstance());

@@ -1,3 +1,4 @@
+
 package com.example.app4.user_files;
 
 //...................................................................................
@@ -17,6 +18,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageButton;
+import com.example.app4.admin_files.AdminRegistration;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -59,6 +61,7 @@ public class HomePage extends FragmentActivity implements OnMapReadyCallback {
     ParkSpaceDetails stationDetails;
     MarkerOptions options1,options2,options3,options4,options5;
 
+    AdminRegistration ar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -173,11 +176,11 @@ public class HomePage extends FragmentActivity implements OnMapReadyCallback {
                         @Override
                         public void onMapReady(GoogleMap googleMap) {
                             latLng = new LatLng(location.getLatitude(),location.getLongitude());
-//                            latLng1 = new LatLng(18.47631051163299, 73.82269152992573);
-//                            latLng2 = new LatLng(18.45034642830959, 73.83401644298925);
-//                            latLng3 = new LatLng(18.446961324914785, 73.82061296592187);
-//                            latLng4 = new LatLng(18.514674752892, 73.84887474740029);
-//                            latLng5 = new LatLng(18.470434464081343, 73.82994996886168);
+                            latLng1 = new LatLng(18.47631051163299, 73.82269152992573);
+                            latLng2 = new LatLng(18.45034642830959, 73.83401644298925);
+                            latLng3 = new LatLng(18.446961324914785, 73.82061296592187);
+                            latLng4 = new LatLng(18.514674752892, 73.84887474740029);
+                            latLng5 = new LatLng(18.470434464081343, 73.82994996886168);
 
 
                             //set marker
@@ -190,10 +193,10 @@ public class HomePage extends FragmentActivity implements OnMapReadyCallback {
 
                             HashMap<Double,Double> markers = new HashMap<>();
                             markers.put(latLng1.latitude,latLng1.longitude);
-//                            markers.put(latLng2.latitude,latLng2.longitude);
-//                            markers.put(latLng3.latitude,latLng3.longitude);
-//                            markers.put(latLng4.latitude,latLng4.longitude);
-//                            markers.put(latLng5.latitude,latLng5.longitude);
+                            markers.put(latLng2.latitude,latLng2.longitude);
+                            markers.put(latLng3.latitude,latLng3.longitude);
+                            markers.put(latLng4.latitude,latLng4.longitude);
+                            markers.put(latLng5.latitude,latLng5.longitude);
 
                             for(Map.Entry m : markers.entrySet()){
                                 System.out.println(m.getKey()+" "+m.getValue());

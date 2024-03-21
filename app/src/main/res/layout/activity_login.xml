@@ -46,26 +46,16 @@
 
             <EditText
                 android:id="@+id/passWORD"
-                android:layout_width="268dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:fontFamily="@font/rowdies_regular"
                 android:hint="@string/password1"
+                android:drawableEnd="@drawable/ic_show"
                 android:importantForAutofill="no"
                 android:inputType="textPassword"
                 android:paddingBottom="15dp" />
-
-            <ImageButton
-                android:id="@+id/showPass"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginStart="10sp"
-                android:layout_marginTop="10sp"
-                android:layout_toEndOf="@+id/passWORD"
-                android:background="@color/TRANSPERENT"
-                android:foreground="@drawable/ic_show"
-                android:onClick="hidePassword" />
 
             <ImageButton
                 android:id="@+id/hidePass"
