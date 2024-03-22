@@ -176,11 +176,10 @@ public class HomePage extends FragmentActivity implements OnMapReadyCallback {
                         @Override
                         public void onMapReady(GoogleMap googleMap) {
                             latLng = new LatLng(location.getLatitude(),location.getLongitude());
-                            latLng1 = new LatLng(18.47631051163299, 73.82269152992573);
-                            latLng2 = new LatLng(18.45034642830959, 73.83401644298925);
-                            latLng3 = new LatLng(18.446961324914785, 73.82061296592187);
-                            latLng4 = new LatLng(18.514674752892, 73.84887474740029);
-                            latLng5 = new LatLng(18.470434464081343, 73.82994996886168);
+                            latLng1 = new LatLng(21.084691838718097, 78.97048601037166);
+                            latLng2 = new LatLng(21.132979158713834, 79.09674795270031);
+                            latLng3 = new LatLng(21.13472983758926, 79.07655722386396);
+                            latLng4 = new LatLng(21.105916062361, 79.06964423735391);
 
 
                             //set marker
@@ -196,7 +195,19 @@ public class HomePage extends FragmentActivity implements OnMapReadyCallback {
                             markers.put(latLng2.latitude,latLng2.longitude);
                             markers.put(latLng3.latitude,latLng3.longitude);
                             markers.put(latLng4.latitude,latLng4.longitude);
-                            markers.put(latLng5.latitude,latLng5.longitude);
+
+                            options1 = new MarkerOptions().position(latLng1).title("D-Mart").icon(BitmapFromVector(getApplicationContext(), R.drawable.park));;
+                            googleMap.addMarker(options1);
+
+                            options2 = new MarkerOptions().position(latLng2).title("VR Mall").icon(BitmapFromVector(getApplicationContext(), R.drawable.park));;
+                            googleMap.addMarker(options2);
+
+                            options3 = new MarkerOptions().position(latLng3).title("Centre Point").icon(BitmapFromVector(getApplicationContext(), R.drawable.park));;
+                            googleMap.addMarker(options3);
+
+                            options4 = new MarkerOptions().position(latLng4).title("Radison Blue").icon(BitmapFromVector(getApplicationContext(), R.drawable.park));
+                            googleMap.addMarker(options4);
+
 
                             for(Map.Entry m : markers.entrySet()){
                                 System.out.println(m.getKey()+" "+m.getValue());
@@ -215,35 +226,29 @@ public class HomePage extends FragmentActivity implements OnMapReadyCallback {
                                     intent.putExtra("message", markerName);
 
                                     switch (markerName) {
-                                        case "Evigo Charge Charging Station":
+                                        case "D-Mart":
                                             intent.putExtra("status", "Open");
                                             intent.putExtra("ports", "3");
                                             intent.putExtra("link", getString(R.string.evigo));
                                             intent.putExtra("price","10");
                                             break;
-                                        case "Go Easy Smart Technology Pvt Ltd":
+                                        case "VR Mall":
                                             intent.putExtra("status", "Open");
                                             intent.putExtra("ports", "2");
-                                            intent.putExtra("link", getString(R.string.gest));
+                                            intent.putExtra("link", getString(R.string.ather));
                                             intent.putExtra("price","25");
                                             break;
-                                        case "Synergy Solutions AC Charging Station":
+                                        case "Centre Point":
                                             intent.putExtra("status", "Close");
                                             intent.putExtra("ports", "2");
                                             intent.putExtra("link", getString(R.string.synergy));
                                             intent.putExtra("price","15");
                                             break;
-                                        case "Arjun Engineering Services":
+                                        case "Radison Blue":
                                             intent.putExtra("status", "Open");
                                             intent.putExtra("ports", "1");
-                                            intent.putExtra("link", getString(R.string.arjun));
+                                            intent.putExtra("link", getString(R.string.gest));
                                             intent.putExtra("price","15");
-                                            break;
-                                        case "Ather Grid Charging Station":
-                                            intent.putExtra("status", "Close");
-                                            intent.putExtra("ports", "2");
-                                            intent.putExtra("link", getString(R.string.ather));
-                                            intent.putExtra("price","18");
                                             break;
                                     }
 

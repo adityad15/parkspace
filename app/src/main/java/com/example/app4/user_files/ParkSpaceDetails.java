@@ -14,7 +14,7 @@ import com.example.app4.R;
 
 public class ParkSpaceDetails extends AppCompatActivity {
 
-    TextView status, address, contact, price, ather,arjun,gest,synergy,evigo, ports, stationName;
+    TextView status, address, contact, price, ather,gest,synergy,evigo, ports, stationName;
     Button bookBtn;
 
 
@@ -27,7 +27,6 @@ public class ParkSpaceDetails extends AppCompatActivity {
         status = findViewById(R.id.currentStatus);
         address = findViewById(R.id.stationAddress);
         ather = findViewById(R.id.currentLocation1);
-        arjun = findViewById(R.id.currentLocation2);
         bookBtn = findViewById(R.id.bookBtn);
         gest = findViewById(R.id.currentLocation3);
         synergy = findViewById(R.id.currentLocation4);
@@ -49,27 +48,23 @@ public class ParkSpaceDetails extends AppCompatActivity {
         stationName.setText(str);
         price.setText(price1);
         ather.setMovementMethod(LinkMovementMethod.getInstance());
-        arjun.setMovementMethod(LinkMovementMethod.getInstance());
         gest.setMovementMethod(LinkMovementMethod.getInstance());
         synergy.setMovementMethod(LinkMovementMethod.getInstance());
         evigo.setMovementMethod(LinkMovementMethod.getInstance());
 
         try {
             switch (links) {
-                case "ather":
+                case "dmart":
                     ather.setVisibility(View.VISIBLE);
                     break;
-                case "evigo":
+                case "vr-mall":
                     evigo.setVisibility(View.VISIBLE);
                     break;
-                case "gest":
+                case "radisson":
                     gest.setVisibility(View.VISIBLE);
                     break;
-                case "synergy":
+                case "centre-point":
                     synergy.setVisibility(View.VISIBLE);
-                    break;
-                case "arjun":
-                    arjun.setVisibility(View.VISIBLE);
                     break;
             }
         } catch (Exception exception){
@@ -79,11 +74,10 @@ public class ParkSpaceDetails extends AppCompatActivity {
 
         Intent intent5 = new Intent(getApplicationContext(), SlotBooking.class);
         switch (str) {
-            case "Evigo Charge Charging Station":
-            case "Go Easy Smart Technology Pvt Ltd":
-            case "Arjun Engineering Services":
-            case "Synergy Solutions AC Charging Station":
-            case "Ather Grid Charging Station":
+            case "D-Mart":
+            case "VR Mall":
+            case "Centre Point":
+            case "Radison Blue":
                 intent5.putExtra("price",price1);
                 break;
         }

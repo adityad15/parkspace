@@ -140,11 +140,10 @@
     <string name="contactNumber">contact_number</string>
     <string name="contact">Contact:</string>
     <string name="book_slot_now">NEXT</string>
-    <string name="evigo"><a href="https://goo.gl/maps/stHPnnQ5bqUfdp7cA">evigo</a></string>
-    <string name="ather"><a href="https://goo.gl/maps/XECDkBwY4sn5hicG9">ather</a></string>
-    <string name="gest"><a href="https://goo.gl/maps/bR2YDyJsqxySccyL7">gest</a></string>
-    <string name="synergy"><a href="https://goo.gl/maps/878rE5Jz7DXuCzW58">synergy</a></string>
-    <string name="arjun"><a href="https://goo.gl/maps/A4sLqV5BKQfzL3W79">arjun</a></string>
+    <string name="evigo"><a href="https://maps.app.goo.gl/A682mHdRh8oHQNrV7">dmart</a></string>
+    <string name="ather"><a href="https://maps.app.goo.gl/e17X7YkRFoPBjR3K6">vr-mall</a></string>
+    <string name="gest"><a href="https://goo.gl/maps/bR2YDyJsqxySccyL7">radisson</a></string>
+    <string name="synergy"><a href="https://maps.app.goo.gl/nTxPLxzhe9SV9VZK9">centre-point</a></string>
     <string name="price">Price(in rupees):</string>
     <string name="get_directions">Get Direction:</string>
 </resources>
